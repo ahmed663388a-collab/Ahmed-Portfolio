@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0b0f19">
+    <meta name="description" content="أحمد - مطور Full Stack محترف | 50+ مشروع ناجح | تطوير مواقع وتطبيقات">
+    <meta name="keywords" content="Full Stack Developer, UI/UX, React, Next.js, Laravel, Flutter, Web Development">
+    <meta name="author" content="Ahmed - Full Stack Developer">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="أحمد | Full Stack Developer & UI/UX Engineer">
+    <meta property="og:description" content="50+ مشروع ناجح | حلول رقمية متكاملة | تطوير مواقع وتطبيقات">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="أحمد | Full Stack Developer">
+    <meta name="twitter:description" content="50+ مشروع ناجح | حلول رقمية متكاملة">
+    <title>أحمد | Full Stack Developer & UI/UX Engineer | 50+ مشروع ناجح</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo-wrapper">
+                <img src="images/logo.png" alt="Ahmed Logo" class="loading-logo" loading="eager" width="120" height="120">
+                <div class="loading-logo-glow"></div>
+            </div>
+            <div class="loading-text-wrapper">
+                <h2 class="loading-title">أحمد</h2>
+                <p class="loading-subtitle">Full Stack Developer</p>
+            </div>
+            <div class="loading-progress-container">
+                <div class="loading-progress-track">
+                    <div class="loading-progress-bar" id="loading-progress-bar"></div>
+                </div>
+                <span class="loading-percentage" id="loading-percentage">0%</span>
+            </div>
+            <div class="loading-particles" id="loading-particles"></div>
+        </div>
+    </div>
+
+    <div class="scroll-progress-container" id="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-trail" id="custom-cursor-trail"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <nav class="main-navbar" id="main-navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="#hero" class="navbar-logo-link" aria-label="الصفحة الرئيسية">
+                    <div class="navbar-logo-wrapper">
+                        <img src="images/logo.png" alt="Ahmed Logo" class="navbar-logo" loading="eager" width="48" height="48">
+                        <div class="navbar-logo-glow"></div>
+                    </div>
+                    <div class="navbar-brand-text">
+                        <span class="navbar-brand-name">أحمد</span>
+                        <span class="navbar-brand-title">Full Stack</span>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#hero" class="nav-link active" data-section="hero"><span class="nav-link-icon">🏠</span><span class="nav-link-text">الرئيسية</span><span class="nav-link-indicator"></span></a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link" data-section="about"><span class="nav-link-icon">👤</span><span class="nav-link-text">عني</span><span class="nav-link-indicator"></span></a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link" data-section="projects"><span class="nav-link-icon">💼</span><span class="nav-link-text">المشاريع</span><span class="nav-link-indicator"></span></a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link" data-section="skills"><span class="nav-link-icon">⚙️</span><span class="nav-link-text">المهارات</span><span class="nav-link-indicator"></span></a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link" data-section="services"><span class="nav-link-icon">🚀</span><span class="nav-link-text">الخدمات</span><span class="nav-link-indicator"></span></a></li>
+                    <li class="nav-item"><a href="#comments" class="nav-link" data-section="comments"><span class="nav-link-icon">💬</span><span class="nav-link-text">التعليقات</span><span class="nav-link-indicator"></span></a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact"><span class="nav-link-icon">📞</span><span class="nav-link-text">تواصل</span><span class="nav-link-indicator"></span></a></li>
+                </ul>
+            </div>
+            <div class="navbar-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="تغيير اللغة"><span class="lang-toggle-text">EN</span><span class="lang-toggle-icon">🌐</span></button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="تغيير الوضع"><span class="theme-toggle-icon theme-icon-light">☀️</span><span class="theme-toggle-icon theme-icon-dark">🌙</span></button>
+                <button class="navbar-toggler" id="navbar-toggler" aria-label="فتح القائمة" aria-expanded="false">
+                    <span class="toggler-line toggler-line-1"></span>
+                    <span class="toggler-line toggler-line-2"></span>
+                    <span class="toggler-line toggler-line-3"></span>
+                </button>
+            </div>
+        </div>
+        <div class="navbar-mobile-menu" id="navbar-mobile-menu">
+            <div class="mobile-menu-backdrop"></div>
+            <div class="mobile-menu-panel">
+                <div class="mobile-menu-header">
+                    <div class="mobile-menu-brand">
+                        <img src="images/logo.png" alt="Logo" class="mobile-menu-logo" loading="lazy" width="40" height="40">
+                        <span class="mobile-menu-brand-name">أحمد</span>
+                    </div>
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="إغلاق القائمة">
+                        <span class="close-line close-line-1"></span>
+                        <span class="close-line close-line-2"></span>
+                    </button>
+                </div>
+                <ul class="mobile-menu-nav">
+                    <li class="mobile-nav-item"><a href="#hero" class="mobile-nav-link" data-section="hero"><span class="mobile-nav-icon">🏠</span><span class="mobile-nav-text">الرئيسية</span></a></li>
+                    <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link" data-section="about"><span class="mobile-nav-icon">👤</span><span class="mobile-nav-text">عني</span></a></li>
+                    <li class="mobile-nav-item"><a href="#projects" class="mobile-nav-link" data-section="projects"><span class="mobile-nav-icon">💼</span><span class="mobile-nav-text">المشاريع</span></a></li>
+                    <li class="mobile-nav-item"><a href="#skills" class="mobile-nav-link" data-section="skills"><span class="mobile-nav-icon">⚙️</span><span class="mobile-nav-text">المهارات</span></a></li>
+                    <li class="mobile-nav-item"><a href="#services" class="mobile-nav-link" data-section="services"><span class="mobile-nav-icon">🚀</span><span class="mobile-nav-text">الخدمات</span></a></li>
+                    <li class="mobile-nav-item"><a href="#comments" class="mobile-nav-link" data-section="comments"><span class="mobile-nav-icon">💬</span><span class="mobile-nav-text">التعليقات</span></a></li>
+                    <li class="mobile-nav-item"><a href="#contact" class="mobile-nav-link" data-section="contact"><span class="mobile-nav-icon">📞</span><span class="mobile-nav-text">تواصل معي</span></a></li>
+                </ul>
+                <div class="mobile-menu-footer">
+                    <div class="mobile-menu-social">
+                        <a href="https://wa.me/201208760020" class="mobile-social-link" aria-label="واتساب" target="_blank" rel="noopener noreferrer"><span class="mobile-social-icon">💬</span></a>
+                        <a href="tel:01208760020" class="mobile-social-link" aria-label="اتصال"><span class="mobile-social-icon">📞</span></a>
+                        <a href="mailto:ahmed@developer.com" class="mobile-social-link" aria-label="بريد إلكتروني"><span class="mobile-social-icon">✉️</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="hero" aria-label="الصفحة الرئيسية">
+        <div class="hero-background">
+            <div class="hero-gradient-layer hero-gradient-1"></div>
+            <div class="hero-gradient-layer hero-gradient-2"></div>
+            <div class="hero-gradient-layer hero-gradient-3"></div>
+            <div class="hero-particles-container" id="hero-particles"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" id="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-text">متاح للعمل</span>
+            </div>
+            <div class="hero-logo-wrapper" id="hero-logo-wrapper">
+                <div class="hero-logo-ring hero-logo-ring-1"></div>
+                <div class="hero-logo-ring hero-logo-ring-2"></div>
+                <div class="hero-logo-ring hero-logo-ring-3"></div>
+                <img src="images/logo.png" alt="Ahmed Logo" class="hero-logo" loading="eager" width="180" height="180">
+                <div class="hero-logo-glow"></div>
+            </div>
+            <h1 class="hero-title" id="hero-title">
+                <span class="hero-title-line hero-title-line-1">أنا</span>
+                <span class="hero-title-line hero-title-line-2">أحمد</span>
+            </h1>
+            <p class="hero-subtitle" id="hero-subtitle">
+                <span class="hero-subtitle-word">Full Stack</span>
+                <span class="hero-subtitle-separator">|</span>
+                <span class="hero-subtitle-word">UI/UX</span>
+                <span class="hero-subtitle-separator">|</span>
+                <span class="hero-subtitle-word">Software Engineer</span>
+            </p>
+            <p class="hero-description" id="hero-description">
+                مطور Full Stack محترف بخبرة واسعة في بناء أكثر من <strong class="hero-highlight">50+</strong> موقع وتطبيق ناجح
+                <br>أحول الأفكار إلى منتجات رقمية مذهلة بأداء عالمي وتصميم احترافي
+            </p>
+            <div class="hero-stats" id="hero-stats">
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number" data-count="50">0</span>
+                    <span class="hero-stat-suffix">+</span>
+                    <span class="hero-stat-label">مشروع ناجح</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number" data-count="5">0</span>
+                    <span class="hero-stat-suffix">+</span>
+                    <span class="hero-stat-label">سنوات خبرة</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-number" data-count="100">0</span>
+                    <span class="hero-stat-suffix">%</span>
+                    <span class="hero-stat-label">راضٍ عن الخدمة</span>
+                </div>
+            </div>
+            <div class="hero-cta" id="hero-cta">
+                <a href="#projects" class="hero-btn hero-btn-primary" id="hero-btn-work">
+                    <span class="hero-btn-icon">🚀</span>
+                    <span class="hero-btn-text">شاهد أعمالي</span>
+                    <span class="hero-btn-ripple"></span>
+                </a>
+                <a href="tel:01208760020" class="hero-btn hero-btn-secondary" id="hero-btn-call">
+                    <span class="hero-btn-icon">📞</span>
+                    <span class="hero-btn-text">اتصل بي</span>
+                    <span class="hero-btn-ripple"></span>
+                </a>
+                <a href="https://wa.me/201208760020" class="hero-btn hero-btn-whatsapp" id="hero-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <span class="hero-btn-icon">💬</span>
+                    <span class="hero-btn-text">واتساب</span>
+                    <span class="hero-btn-ripple"></span>
+                </a>
+            </div>
+            <div class="hero-scroll-indicator" id="hero-scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-mouse-wheel"></div>
+                </div>
+                <span class="scroll-text">اسحب للأسفل</span>
+            </div>
+        </div>
+        <div class="hero-floating-elements">
+            <div class="floating-element floating-element-1">⚡</div>
+            <div class="floating-element floating-element-2">💻</div>
+            <div class="floating-element floating-element-3">🎨</div>
+            <div class="floating-element floating-element-4">🔥</div>
+            <div class="floating-element floating-element-5">🚀</div>
+            <div class="floating-element floating-element-6">💎</div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about" aria-label="من أنا">
+        <div class="section-background">
+            <div class="about-bg-orb about-bg-orb-1"></div>
+            <div class="about-bg-orb about-bg-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" id="about-header">
+                <span class="section-badge">👤</span>
+                <h2 class="section-title">من أنا</h2>
+                <p class="section-subtitle">قصة نجاح في عالم البرمجة والتطوير</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image-wrapper" id="about-image">
+                    <div class="about-image-frame">
+                        <div class="about-image-glow"></div>
+                        <div class="about-image-border"></div>
+                        <div class="about-image-placeholder">
+                            <img src="images/logo.png" alt="Ahmed Profile" class="about-profile-img" loading="lazy" width="300" height="300">
+                        </div>
+                        <div class="about-image-decoration about-decoration-1"></div>
+                        <div class="about-image-decoration about-decoration-2"></div>
+                        <div class="about-image-decoration about-decoration-3"></div>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="about-exp-number">5+</span>
+                        <span class="about-exp-text">سنوات<br>خبرة</span>
+                    </div>
+                </div>
+                <div class="about-text-content" id="about-text">
+                    <div class="about-text-card">
+                        <h3 class="about-heading">مطور Full Stack محترف</h3>
+                        <p class="about-paragraph">
+                            أنا <strong>أحمد</strong>، مطور Full Stack محترف بخبرة واسعة في تصميم وتطوير أكثر من 
+                            <span class="about-highlight">50 موقع إلكتروني</span> حقيقي تم تسليمهم لعملاء في مجالات مختلفة حول العالم.
+                        </p>
+                        <p class="about-paragraph">
+                            أقدّم <strong>حلول رقمية متكاملة</strong> تساعد الشركات والأفراد على تحويل أفكارهم إلى 
+                            <span class="about-highlight">منتجات رقمية ناجحة</span> على أرض الواقع، مع التركيز على الأداء العالي والتصميم الاحترافي.
+                        </p>
+                        <div class="about-features">
+                            <div class="about-feature-item">
+                                <div class="about-feature-icon">🎯</div>
+                                <div class="about-feature-text">
+                                    <h4>تركيز على النتائج</h4>
+                                    <p>كل مشروع يتم بناءه بهدف تحقيق نتائج ملموسة للعميل</p>
+                                </div>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="about-feature-icon">⚡</div>
+                                <div class="about-feature-text">
+                                    <h4>أداء عالمي</h4>
+                                    <p>سرعة تحميل فائقة وتحسين كامل لأداء الموقع</p>
+                                </div>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="about-feature-icon">🎨</div>
+                                <div class="about-feature-text">
+                                    <h4>تصميم مبتكر</h4>
+                                    <p>واجهات مستخدم حديثة وجذابة تترك انطباعاً لا يُنسى</p>
+                                </div>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="about-feature-icon">🔒</div>
+                                <div class="about-feature-text">
+                                    <h4>أمان وموثوقية</h4>
+                                    <p>حماية كاملة للبيانات وأنظمة آمنة على أعلى مستوى</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-cta">
+                            <a href="#contact" class="about-btn">
+                                <span>لنبدأ مشروعك</span>
+                                <span class="about-btn-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section" id="projects" aria-label="المشاريع">
+        <div class="section-background">
+            <div class="projects-bg-pattern"></div>
+            <div class="projects-bg-orb projects-bg-orb-1"></div>
+            <div class="projects-bg-orb projects-bg-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" id="projects-header">
+                <span class="section-badge">💼</span>
+                <h2 class="section-title">أعمالي</h2>
+                <p class="section-subtitle">أكثر من 50+ مشروع ناجح تم تسليمه لعملاء سعداء</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-filter" id="projects-filter">
+                <button class="filter-btn active" data-filter="all"><span class="filter-icon">🌐</span><span class="filter-text">الكل</span></button>
+                <button class="filter-btn" data-filter="web"><span class="filter-icon">🌐</span><span class="filter-text">مواقع</span></button>
+                <button class="filter-btn" data-filter="dashboard"><span class="filter-icon">📊</span><span class="filter-text">لوحات تحكم</span></button>
+                <button class="filter-btn" data-filter="ecommerce"><span class="filter-icon">🛒</span><span class="filter-text">متاجر</span></button>
+                <button class="filter-btn" data-filter="app"><span class="filter-icon">📱</span><span class="filter-text">تطبيقات</span></button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <article class="project-card" data-category="web" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-image-wrapper">
+                            <img src="images/image1.jpg" alt="UAE Real Estate Platform" class="project-image" loading="lazy" width="600" height="400">
+                            <div class="project-image-overlay"></div>
+                            <div class="project-image-glow"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <h3 class="project-title">منصة عقارات الإمارات</h3>
+                            <p class="project-description">منصة عقارات احترافية متكاملة لعرض وإدارة العقارات في الإمارات العربية المتحدة مع نظام بحث متقدم.</p>
+                            <div class="project-footer">
+                                <a href="https://ahmed663388a-collab.github.io/Abraj-Al-Fouad-Real-Estate-Maintenance/" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="project-link-icon">🔗</span>
+                                    <span class="project-link-text">زيارة الموقع</span>
+                                </a>
+                                <div class="project-stats"><span class="project-stat">👁️ 2.5K</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="web" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-image-wrapper">
+                            <img src="images/image2.jpg" alt="UAE Cleaning Services" class="project-image" loading="lazy" width="600" height="400">
+                            <div class="project-image-overlay"></div>
+                            <div class="project-image-glow"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">MongoDB</span>
+                            </div>
+                            <h3 class="project-title">خدمات التنظيف بالإمارات</h3>
+                            <p class="project-description">موقع خدمات تنظيف احترافي مع نظام حجز appointments وإدارة طلبات العملاء بشكل ذكي.</p>
+                            <div class="project-footer">
+                                <a href="https://ahmed663388a-collab.github.io/HONEST_SERVICE/" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="project-link-icon">🔗</span>
+                                    <span class="project-link-text">زيارة الموقع</span>
+                                </a>
+                                <div class="project-stats"><span class="project-stat">👁️ 1.8K</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="ecommerce" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-image-wrapper">
+                            <img src="images/image3.jpg" alt="Jordan Healthy Store" class="project-image" loading="lazy" width="600" height="400">
+                            <div class="project-image-overlay"></div>
+                            <div class="project-image-glow"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Laravel</span>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                            <h3 class="project-title">متجر صحي الأردن</h3>
+                            <p class="project-description">متجر إلكتروني متكامل للمنتجات الصحية والعضوية مع نظام دفع وإدارة مخزون متقدم.</p>
+                            <div class="project-footer">
+                                <a href="https://www.naso-healthy-jo.org/" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="project-link-icon">🔗</span>
+                                    <span class="project-link-text">زيارة الموقع</span>
+                                </a>
+                                <div class="project-stats"><span class="project-stat">👁️ 3.2K</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="web" data-tilt>
+                    <div class="project-card-inner">
+                        <div class="project-image-wrapper">
+                            <img src="images/image4.jpg" alt="Netherlands Fashion Brand" class="project-image" loading="lazy" width="600" height="400">
+                            <div class="project-image-overlay"></div>
+                            <div class="project-image-glow"></div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Tailwind</span>
+                            </div>
+                            <h3 class="project-title">علامة أزياء هولندا</h3>
+                            <p class="project-description">موقع أزياء فاخر بتصميم عصري وأنيق مع تجربة تسوق سلسة وممتعة للمستخدم.</p>
+                            <div class="project-footer">
+                                <a href="https://sasports.nl" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="project-link-icon">🔗</span>
+                                    <span class="project-link-text">زيارة الموقع</span>
+                                </a>
+                                <div class="project-stats"><span class="project-stat">👁️ 4.1K</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-cta">
+                <a href="#contact" class="projects-btn"><span>هل لديك مشروع في بالك؟</span><span class="projects-btn-icon">🚀</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills" aria-label="المهارات والتقنيات">
+        <div class="section-background">
+            <div class="skills-bg-grid"></div>
+            <div class="skills-bg-orb skills-bg-orb-1"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" id="skills-header">
+                <span class="section-badge">⚙️</span>
+                <h2 class="section-title">المهارات والتقنيات</h2>
+                <p class="section-subtitle">أدواتي التقنية المتقدمة لبناء منتجات رقمية عالمية</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-categories">
+                <div class="skills-category" id="skills-frontend">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">🎨</div>
+                        <h3 class="skills-category-title">تطوير الواجهة الأمامية</h3>
+                        <p class="skills-category-desc">Front-End Development</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="React">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">⚛️</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">React</span><div class="skill-progress"><div class="skill-progress-bar" data-width="95"></div></div><span class="skill-level">95%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Next.js">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">▲</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Next.js</span><div class="skill-progress"><div class="skill-progress-bar" data-width="90"></div></div><span class="skill-level">90%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="HTML5">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🌐</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">HTML5</span><div class="skill-progress"><div class="skill-progress-bar" data-width="98"></div></div><span class="skill-level">98%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="CSS3">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🎨</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">CSS3</span><div class="skill-progress"><div class="skill-progress-bar" data-width="97"></div></div><span class="skill-level">97%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">📜</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">JavaScript</span><div class="skill-progress"><div class="skill-progress-bar" data-width="96"></div></div><span class="skill-level">96%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Tailwind">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">💨</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Tailwind CSS</span><div class="skill-progress"><div class="skill-progress-bar" data-width="92"></div></div><span class="skill-level">92%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category" id="skills-backend">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">⚙️</div>
+                        <h3 class="skills-category-title">تطوير الواجهة الخلفية</h3>
+                        <p class="skills-category-desc">Back-End Development</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="Node.js">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🟢</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Node.js</span><div class="skill-progress"><div class="skill-progress-bar" data-width="93"></div></div><span class="skill-level">93%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Express">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🚂</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Express.js</span><div class="skill-progress"><div class="skill-progress-bar" data-width="91"></div></div><span class="skill-level">91%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Laravel">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🟥</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Laravel</span><div class="skill-progress"><div class="skill-progress-bar" data-width="89"></div></div><span class="skill-level">89%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="PHP">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🐘</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">PHP</span><div class="skill-progress"><div class="skill-progress-bar" data-width="94"></div></div><span class="skill-level">94%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="REST API">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🔌</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">REST APIs</span><div class="skill-progress"><div class="skill-progress-bar" data-width="95"></div></div><span class="skill-level">95%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="GraphQL">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">◈</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">GraphQL</span><div class="skill-progress"><div class="skill-progress-bar" data-width="85"></div></div><span class="skill-level">85%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category" id="skills-database">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">🗄️</div>
+                        <h3 class="skills-category-title">قواعد البيانات</h3>
+                        <p class="skills-category-desc">Database & Storage</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="MySQL">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🐬</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">MySQL</span><div class="skill-progress"><div class="skill-progress-bar" data-width="94"></div></div><span class="skill-level">94%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="MongoDB">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🍃</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">MongoDB</span><div class="skill-progress"><div class="skill-progress-bar" data-width="88"></div></div><span class="skill-level">88%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Firebase">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🔥</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Firebase</span><div class="skill-progress"><div class="skill-progress-bar" data-width="90"></div></div><span class="skill-level">90%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category" id="skills-mobile">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">📱</div>
+                        <h3 class="skills-category-title">تطوير الموبايل</h3>
+                        <p class="skills-category-desc">Mobile Development</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="Flutter">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">💙</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Flutter</span><div class="skill-progress"><div class="skill-progress-bar" data-width="92"></div></div><span class="skill-level">92%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="React Native">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">⚛️</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">React Native</span><div class="skill-progress"><div class="skill-progress-bar" data-width="87"></div></div><span class="skill-level">87%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category" id="skills-design">
+                    <div class="skills-category-header">
+                        <div class="skills-category-icon">✨</div>
+                        <h3 class="skills-category-title">UI/UX & أدوات التصميم</h3>
+                        <p class="skills-category-desc">Design & Tools</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="UI/UX">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🎨</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">UI/UX Design</span><div class="skill-progress"><div class="skill-progress-bar" data-width="93"></div></div><span class="skill-level">93%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Figma">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🖌️</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Figma</span><div class="skill-progress"><div class="skill-progress-bar" data-width="91"></div></div><span class="skill-level">91%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="SEO">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">🔍</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">SEO</span><div class="skill-progress"><div class="skill-progress-bar" data-width="88"></div></div><span class="skill-level">88%</span></div>
+                        </div>
+                        <div class="skill-item" data-skill="Performance">
+                            <div class="skill-icon-wrapper"><span class="skill-icon">⚡</span><div class="skill-icon-glow"></div></div>
+                            <div class="skill-info"><span class="skill-name">Performance</span><div class="skill-progress"><div class="skill-progress-bar" data-width="95"></div></div><span class="skill-level">95%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services" aria-label="الخدمات">
+        <div class="section-background">
+            <div class="services-bg-pattern"></div>
+            <div class="services-bg-orb services-bg-orb-1"></div>
+            <div class="services-bg-orb services-bg-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" id="services-header">
+                <span class="section-badge">🚀</span>
+                <h2 class="section-title">خدماتي</h2>
+                <p class="section-subtitle">حلول رقمية متكاملة لتحويل أفكارك إلى واقع</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid" id="services-grid">
+                <div class="service-card" data-service="web">
+                    <div class="service-card-glow"></div>
+                    <div class="service-card-border"></div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">🌐</span>
+                        <div class="service-icon-orb"></div>
+                    </div>
+                    <h3 class="service-title">تطوير مواقع الويب</h3>
+                    <p class="service-description">بناء مواقع احترافية كاملة Front-End & Back-End مع أداء عالي وتصميم عصري يلبي احتياجات عملك.</p>
+                    <ul class="service-features">
+                        <li class="service-feature">✓ تصميم متجاوب لجميع الأجهزة</li>
+                        <li class="service-feature">✓ تحسين SEO متقدم</li>
+                        <li class="service-feature">✓ أداء فائق السرعة</li>
+                        <li class="service-feature">✓ حماية وأمان كامل</li>
+                    </ul>
+                    <div class="service-footer">
+                        <span class="service-tag">Web Development</span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="dashboard">
+                    <div class="service-card-glow"></div>
+                    <div class="service-card-border"></div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">📊</span>
+                        <div class="service-icon-orb"></div>
+                    </div>
+                    <h3 class="service-title">لوحات التحكم والمنصات</h3>
+                    <p class="service-description">إنشاء أنظمة ويب متكاملة ولوحات تحكم احترافية لإدارة البيانات والعمليات بكفاءة عالية.</p>
+                    <ul class="service-features">
+                        <li class="service-feature">✓ واجهة مستخدم سهلة</li>
+                        <li class="service-feature">✓ تقارير وإحصائيات متقدمة</li>
+                        <li class="service-feature">✓ نظام صلاحيات متكامل</li>
+                        <li class="service-feature">✓ API متكامل</li>
+                    </ul>
+                    <div class="service-footer">
+                        <span class="service-tag">Dashboards</span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="uiux">
+                    <div class="service-card-glow"></div>
+                    <div class="service-card-border"></div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">🎨</span>
+                        <div class="service-icon-orb"></div>
+                    </div>
+                    <h3 class="service-title">تصميم UI/UX</h3>
+                    <p class="service-description">تصميم واجهات مستخدم حديثة واحترافية تركز على تجربة المستخدم وتجعل المنتج جذاباً وسهلاً.</p>
+                    <ul class="service-features">
+                        <li class="service-feature">✓ Wireframes & Prototypes</li>
+                        <li class="service-feature">✓ User Research</li>
+                        <li class="service-feature">✓ Design System كامل</li>
+                        <li class="service-feature">✓ Micro-interactions</li>
+                    </ul>
+                    <div class="service-footer">
+                        <span class="service-tag">UI/UX Design</span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="api">
+                    <div class="service-card-glow"></div>
+                    <div class="service-card-border"></div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">🔌</span>
+                        <div class="service-icon-orb"></div>
+                    </div>
+                    <h3 class="service-title">تطوير APIs</h3>
+                    <p class="service-description">بناء Back-End قوي وربط APIs مع أنظمة متعددة لضمان تكامل سلس بين جميع مكونات المشروع.</p>
+                    <ul class="service-features">
+                        <li class="service-feature">✓ RESTful APIs</li>
+                        <li class="service-feature">✓ GraphQL APIs</li>
+                        <li class="service-feature">✓ Authentication & Security</li>
+                        <li class="service-feature">✓ Documentation كامل</li>
+                    </ul>
+                    <div class="service-footer">
+                        <span class="service-tag">API Development</span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="database">
+                    <div class="service-card-glow"></div>
+                    <div class="service-card-border"></div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">🗄️</span>
+                        <div class="service-icon-orb"></div>
+                    </div>
+                    <h3 class="service-title">إدارة قواعد البيانات</h3>
+                    <p class="service-description">تصميم وإدارة قواعد بيانات احترافية بشكل مُحسّن لضمان الأداء العالي والموثوقية.</p>
+                    <ul class="service-features">
+                        <li class="service-feature">✓ تصميم Schema احترافي</li>
+                        <li class="service-feature">✓ Optimization & Indexing</li>
+                        <li class="service-feature">✓ Backup & Recovery</li>
+                        <li class="service-feature">✓ Scaling Solutions</li>
+                    </ul>
+                    <div class="service-footer">
+                        <span class="service-tag">Database</span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="mobile">
+                    <div class="service-card-glow"></div>
+                    <div class="service-card-border"></div>
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">📱</span>
+                        <div class="service-icon-orb"></div>
+                    </div>
+                    <h3 class="service-title">تطوير تطبيقات الموبايل</h3>
+                    <p class="service-description">بناء تطبيقات Flutter وReact Native احترافية تعمل على Android وiOS بأداء عالي وتصميم native.</p>
+                    <ul class="service-features">
+                        <li class="service-feature">✓ Cross-Platform</li>
+                        <li class="service-feature">✓ Native Performance</li>
+                        <li class="service-feature">✓ Push Notifications</li>
+                        <li class="service-feature">✓ Offline Support</li>
+                    </ul>
+                    <div class="service-footer">
+                        <span class="service-tag">Mobile Apps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comments-section" id="comments" aria-label="نظام التعليقات">
+        <div class="section-background">
+            <div class="comments-bg-orb comments-bg-orb-1"></div>
+            <div class="comments-bg-orb comments-bg-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" id="comments-header">
+                <span class="section-badge">💬</span>
+                <h2 class="section-title">التعليقات</h2>
+                <p class="section-subtitle">شاركنا رأيك - نظام تعليقات تفاعلي متكامل</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="comments-system">
+                <div class="comments-stats-bar">
+                    <div class="comments-stat">
+                        <span class="comments-stat-icon">💬</span>
+                        <span class="comments-stat-number" id="comments-count">0</span>
+                        <span class="comments-stat-label">تعليق</span>
+                    </div>
+                    <div class="comments-stat">
+                        <span class="comments-stat-icon">👥</span>
+                        <span class="comments-stat-number" id="commenters-count">0</span>
+                        <span class="comments-stat-label">معلق</span>
+                    </div>
+                    <div class="comments-stat">
+                        <span class="comments-stat-icon">⭐</span>
+                        <span class="comments-stat-number">5.0</span>
+                        <span class="comments-stat-label">التقييم</span>
+                    </div>
+                </div>
+                <div class="comments-form-wrapper">
+                    <div class="comments-form-card">
+                        <div class="comments-form-header">
+                            <div class="comments-form-icon">✍️</div>
+                            <h3 class="comments-form-title">أضف تعليقك</h3>
+                            <p class="comments-form-subtitle">شاركنا رأيك وانطباعك عن الموقع</p>
+                        </div>
+                        <form class="comments-form" id="comments-form">
+                            <div class="form-group">
+                                <label for="comment-name" class="form-label">
+                                    <span class="form-label-icon">👤</span>
+                                    <span class="form-label-text">الاسم</span>
+                                </label>
+                                <input type="text" id="comment-name" class="form-input" placeholder="اكتب اسمك هنا..." required autocomplete="name" minlength="2" maxlength="50">
+                                <div class="form-input-glow"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-email" class="form-label">
+                                    <span class="form-label-icon">📧</span>
+                                    <span class="form-label-text">البريد الإلكتروني (اختياري)</span>
+                                </label>
+                                <input type="email" id="comment-email" class="form-input" placeholder="example@email.com" autocomplete="email">
+                                <div class="form-input-glow"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-message" class="form-label">
+                                    <span class="form-label-icon">💭</span>
+                                    <span class="form-label-text">التعليق</span>
+                                </label>
+                                <textarea id="comment-message" class="form-textarea" placeholder="اكتب تعليقك هنا..." required minlength="5" maxlength="500" rows="4"></textarea>
+                                <div class="form-input-glow"></div>
+                                <div class="form-char-count">
+                                    <span id="char-count">0</span>
+                                    <span>/ 500</span>
+                                </div>
+                            </div>
+                            <div class="form-group form-rating-group">
+                                <label class="form-label">
+                                    <span class="form-label-icon">⭐</span>
+                                    <span class="form-label-text">التقييم</span>
+                                </label>
+                                <div class="star-rating" id="star-rating">
+                                    <button type="button" class="star-btn" data-rating="1" aria-label="1 نجمة">⭐</button>
+                                    <button type="button" class="star-btn" data-rating="2" aria-label="2 نجمة">⭐</button>
+                                    <button type="button" class="star-btn" data-rating="3" aria-label="3 نجمة">⭐</button>
+                                    <button type="button" class="star-btn" data-rating="4" aria-label="4 نجمة">⭐</button>
+                                    <button type="button" class="star-btn" data-rating="5" aria-label="5 نجمة">⭐</button>
+                                </div>
+                            </div>
+                            <button type="submit" class="form-submit-btn" id="form-submit-btn">
+                                <span class="form-submit-icon">🚀</span>
+                                <span class="form-submit-text">نشر التعليق</span>
+                                <div class="form-submit-ripple"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="comments-list-wrapper">
+                    <div class="comments-list-header">
+                        <h3 class="comments-list-title">التعليقات</h3>
+                        <div class="comments-sort">
+                            <button class="sort-btn active" data-sort="newest">الأحدث</button>
+                            <button class="sort-btn" data-sort="oldest">الأقدم</button>
+                        </div>
+                    </div>
+                    <div class="comments-list" id="comments-list"></div>
+                    <div class="comments-empty" id="comments-empty">
+                        <div class="comments-empty-icon">💬</div>
+                        <h4 class="comments-empty-title">لا توجد تعليقات بعد</h4>
+                        <p class="comments-empty-text">كن أول من يعلق وشاركنا رأيك!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-label="تواصل معي">
+        <div class="section-background">
+            <div class="contact-bg-gradient"></div>
+            <div class="contact-bg-orb contact-bg-orb-1"></div>
+            <div class="contact-bg-orb contact-bg-orb-2"></div>
+            <div class="contact-bg-orb contact-bg-orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" id="contact-header">
+                <span class="section-badge">📞</span>
+                <h2 class="section-title">تواصل معي</h2>
+                <p class="section-subtitle">جاهز لتحويل فكرتك إلى واقع رقمي مذهل</p>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info-wrapper" id="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-info-header">
+                            <div class="contact-info-logo">
+                                <img src="images/logo.png" alt="Logo" class="contact-logo-img" loading="lazy" width="80" height="80">
+                                <div class="contact-logo-glow"></div>
+                            </div>
+                            <h3 class="contact-info-name">أحمد</h3>
+                            <p class="contact-info-title">Full Stack Developer</p>
+                        </div>
+                        <div class="contact-info-body">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon-wrapper">
+                                    <span class="contact-info-icon">📱</span>
+                                    <div class="contact-info-icon-glow"></div>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">الهاتف / واتساب</span>
+                                    <a href="https://wa.me/201208760020" class="contact-info-value" target="_blank" rel="noopener noreferrer">01208760020</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon-wrapper">
+                                    <span class="contact-info-icon">📞</span>
+                                    <div class="contact-info-icon-glow"></div>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">اتصال مباشر</span>
+                                    <a href="tel:01208760020" class="contact-info-value">01208760020</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon-wrapper">
+                                    <span class="contact-info-icon">📧</span>
+                                    <div class="contact-info-icon-glow"></div>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">البريد الإلكتروني</span>
+                                    <a href="mailto:ahmed@developer.com" class="contact-info-value">ahmed@developer.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon-wrapper">
+                                    <span class="contact-info-icon">🌍</span>
+                                    <div class="contact-info-icon-glow"></div>
+                                </div>
+                                <div class="contact-info-text">
+                                    <span class="contact-info-label">الموقع</span>
+                                    <span class="contact-info-value">متاح للعمل عالمياً</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-info-footer">
+                            <p class="contact-info-status">
+                                <span class="status-dot"></span>
+                                <span class="status-text">متاح للمشاريع الجديدة</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" id="contact-form-wrapper">
+                    <div class="contact-form-card">
+                        <div class="contact-form-header">
+                            <h3 class="contact-form-title">أرسل رسالة</h3>
+                            <p class="contact-form-subtitle">املأ النموذج وسأتواصل معك في أقرب وقت</p>
+                        </div>
+                        <form class="contact-form" id="contact-form">
+                            <div class="contact-form-row">
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label">
+                                        <span class="form-label-icon">👤</span>
+                                        <span class="form-label-text">الاسم</span>
+                                    </label>
+                                    <input type="text" id="contact-name" class="form-input" placeholder="اسمك الكامل" required autocomplete="name">
+                                    <div class="form-input-glow"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email" class="form-label">
+                                        <span class="form-label-icon">📧</span>
+                                        <span class="form-label-text">البريد الإلكتروني</span>
+                                    </label>
+                                    <input type="email" id="contact-email" class="form-input" placeholder="example@email.com" required autocomplete="email">
+                                    <div class="form-input-glow"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject" class="form-label">
+                                    <span class="form-label-icon">📋</span>
+                                    <span class="form-label-text">الموضوع</span>
+                                </label>
+                                <input type="text" id="contact-subject" class="form-input" placeholder="موضوع الرسالة" required>
+                                <div class="form-input-glow"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-service" class="form-label">
+                                    <span class="form-label-icon">🎯</span>
+                                    <span class="form-label-text">نوع الخدمة</span>
+                                </label>
+                                <select id="contact-service" class="form-select" required>
+                                    <option value="" disabled selected>اختر نوع الخدمة...</option>
+                                    <option value="website">تطوير موقع ويب</option>
+                                    <option value="dashboard">لوحة تحكم / منصة</option>
+                                    <option value="ecommerce">متجر إلكتروني</option>
+                                    <option value="mobile">تطبيق موبايل</option>
+                                    <option value="uiux">تصميم UI/UX</option>
+                                    <option value="api">تطوير API</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                                <div class="form-input-glow"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label">
+                                    <span class="form-label-icon">💭</span>
+                                    <span class="form-label-text">الرسالة</span>
+                                </label>
+                                <textarea id="contact-message" class="form-textarea" placeholder="اكتب تفاصيل مشروعك هنا..." required rows="5" minlength="10" maxlength="1000"></textarea>
+                                <div class="form-input-glow"></div>
+                            </div>
+                            <div class="contact-quick-actions">
+                                <a href="https://wa.me/201208760020" class="contact-quick-btn contact-quick-whatsapp" target="_blank" rel="noopener noreferrer">
+                                    <span class="contact-quick-icon">💬</span>
+                                    <span class="contact-quick-text">واتساب</span>
+                                </a>
+                                <a href="tel:01208760020" class="contact-quick-btn contact-quick-call">
+                                    <span class="contact-quick-icon">📞</span>
+                                    <span class="contact-quick-text">اتصال</span>
+                                </a>
+                            </div>
+                            <button type="submit" class="form-submit-btn contact-submit-btn" id="contact-submit-btn">
+                                <span class="form-submit-icon">🚀</span>
+                                <span class="form-submit-text">إرسال الرسالة</span>
+                                <div class="form-submit-ripple"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="main-footer">
+        <div class="footer-background">
+            <div class="footer-bg-gradient"></div>
+            <div class="footer-bg-orb footer-bg-orb-1"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrapper">
+                        <img src="images/logo.png" alt="Ahmed Logo" class="footer-logo" loading="lazy" width="60" height="60">
+                        <div class="footer-logo-glow"></div>
+                    </div>
+                    <h3 class="footer-brand-name">أحمد</h3>
+                    <p class="footer-brand-title">Full Stack Developer & UI/UX Engineer</p>
+                    <p class="footer-brand-desc">50+ مشروع ناجح | حلول رقمية متكاملة | أداء عالمي</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4 class="footer-links-title">روابط سريعة</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="#hero" class="footer-link">الرئيسية</a></li>
+                            <li><a href="#about" class="footer-link">عني</a></li>
+                            <li><a href="#projects" class="footer-link">المشاريع</a></li>
+                            <li><a href="#skills" class="footer-link">المهارات</a></li>
+                            <li><a href="#services" class="footer-link">الخدمات</a></li>
+                            <li><a href="#contact" class="footer-link">تواصل معي</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4 class="footer-links-title">الخدمات</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="#services" class="footer-link">تطوير مواقع</a></li>
+                            <li><a href="#services" class="footer-link">لوحات تحكم</a></li>
+                            <li><a href="#services" class="footer-link">تصميم UI/UX</a></li>
+                            <li><a href="#services" class="footer-link">تطوير APIs</a></li>
+                            <li><a href="#services" class="footer-link">تطبيقات موبايل</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4 class="footer-links-title">تواصل</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="https://wa.me/201208760020" class="footer-link" target="_blank" rel="noopener noreferrer">واتساب: 01208760020</a></li>
+                            <li><a href="tel:01208760020" class="footer-link">اتصال: 01208760020</a></li>
+                            <li><a href="mailto:ahmed@developer.com" class="footer-link">ahmed@developer.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/201208760020" class="footer-social-link" aria-label="واتساب" target="_blank" rel="noopener noreferrer">
+                        <span class="footer-social-icon">💬</span>
+                        <div class="footer-social-glow"></div>
+                    </a>
+                    <a href="tel:01208760020" class="footer-social-link" aria-label="اتصال">
+                        <span class="footer-social-icon">📞</span>
+                        <div class="footer-social-glow"></div>
+                    </a>
+                    <a href="mailto:ahmed@developer.com" class="footer-social-link" aria-label="بريد إلكتروني">
+                        <span class="footer-social-icon">📧</span>
+                        <div class="footer-social-glow"></div>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright">© 2026 أحمد - Full Stack Developer. جميع الحقوق محفوظة.</p>
+                    <p class="footer-credit">تم التطوير بـ ❤️ وشغف للبرمجة</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="العودة للأعلى">
+        <span class="back-to-top-icon">↑</span>
+        <div class="back-to-top-glow"></div>
+    </button>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
